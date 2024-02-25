@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhoneBook</title>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="Css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>
+    <nav>
+        <h1>Phone Book</h1>
+    </nav>
+    <!-- CRUD  -->
+     <div class="crud">
+
+
+        <div class="crud1">
+          <button class="cadd poin"><i class="fa-solid fa-plus" style="color: #53d5fd;"></i>Add</button>
+          <button id="cresetid"class="creset poin"><i class="fa-solid fa-window-restore " style="color: #00c7fc;"></i>Reset</button>
+          <input type="checkbox" name="delete_all" id="delete_all_box" class="poin">
+        </div>
+
+
+
+        <div class="crud2">
+            <div class="search">
+                <i class="fa-brands fa-searchengin fa-2xl" style="color: #00c7fc;"></i>
+                <input type="text" id="contactId" class="text" placeholder="Search for Contacts">
+                <button>Search</button>
+            </div>
+        </div>
+
+     </div>
+     <!-- CRUD END -->
+     <!-- Table  -->
+    <div class="table-box">
+     <table>
+        <tr>
+            <th>Sr no.</th>
+            <th>Profile</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Contact No</th>
+            <th>Email ID</th>
+            <th>Actions</th>
+        </tr>
+
+       <tbody id="table_data">
+
+       </tbody>
+     </table>
+    </div>
+    <!-- table end  -->
+
+    <!-- modal start -->
+    <div class="modal ">
+        <i class="fa-sharp fa-solid fa-circle-xmark fa-2xl close-icon" style="color: #791a3e;"></i>
+        <div class="left">
+            
+            <div class="img-box">
+                <img src="/Assets/profile.png" alt="Profile" style="height: 50%;" id="profile_pic" >
+                <label for="upload_pic">
+                    <i class="fa-solid fa-plus fa-2xl" style="color: #00a3d7;"></i> </label>
+                <input type="file" id="upload_pic">
+            </div>
+
+        </div>
+        
+        <div class="right">
+            
+            <form id="form_register">
+            <div class="contact-inp">
+                
+                <div class="input-box">
+                    <label for="f_name">First Name</label>
+                    <input type="text" id="f_name" required placeholder="Your First Name" >
+                    </div>
+                    <div class="input-box">
+                        <label for="l_name">Last Name</label>
+                        <input type="text" id="l_name" placeholder="Your Last Name">
+                    </div>
+                    <div class="input-box">
+                        <label for="ph_no">Mobile No.</label>
+                        <input type="tel" required id="ph_no" placeholder="8868960575" pattern="[0-9]{10}" >
+                    </div>
+                    <div class="input-box">
+                        <label for="mail">Email-Id&nbsp; &nbsp;</label>
+                        <input type="email" id="mail" placeholder="PriyamRaj@gmail.com">
+                    </div>
+                </div>
+                <!-- Save and Edit options -->
+                <div class="contact-save">
+                    <button class="b-save" id="save">Save</button>
+                    <button disabled="disabled" class="b-save" id="edit">Edit</button>
+                </div>
+            </form>
+                
+        
+
+        </div>
+    </div>
+    <!-- modal end  -->
+
+    
+
+<script src="Js/one.js"></script>
+</body>
+</html>
